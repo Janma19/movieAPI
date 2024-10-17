@@ -22,11 +22,11 @@ mongoose.connect("mongodb+srv://admin:admin1234@cluster0.jv4jyzj.mongodb.net/MTE
 mongoose.connection.once('open', () => console.log('Now connected to MongoDB Atlas.'));
 
 //Routes Middleware
-const workoutRoutes = require("./routes/movie");
+const movieRoutes = require("./routes/movie");
 const userRoutes = require("./routes/user");
 
 
-app.use("/workouts", workoutRoutes);
+app.use("/movies", movieRoutes);
 app.use("/users", userRoutes);
 
 if(require.main === module){
