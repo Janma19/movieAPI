@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
 //MongoDB database connection
-mongoose.connect("mongodb+srv://admin:admin1234@cluster0.jv4jyzj.mongodb.net/MTE?retryWrites=true&w=majority", {
+mongoose.connect(process.env.PORT, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
